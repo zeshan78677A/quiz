@@ -1,0 +1,183 @@
+/* dashboard.css */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.dashboard-header {
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.quiz-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    flex: 1;
+}
+
+.question-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.question-header {
+    margin-bottom: 1rem;
+}
+
+.answer-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.quiz-navigation button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff1e00;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-navigation button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.quiz-navigation button:hover:not(:disabled) {
+    background-color: #0fb300;
+}
+
+.result-section {
+    text-align: center;
+}
+
+.result-effect {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #2850a7;
+}
+.result-section {
+    text-align: center;
+    position: relative; /* To position the popup relative to this section */
+}
+
+.result-effect {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #28a745;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: popupAnimation 0.5s forwards;
+}
+
+/* Keyframes for pop-up animation */
+@keyframes popupAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Add styles for result section */
+.result-section {
+    text-align: center;
+}
+
+.feedback-section {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.correct-feedback {
+    color: green;
+}
+
+.incorrect-feedback {
+    color: red;
+}
+
+.result-effect {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+/* Basic dashboard styles */
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-section {
+    margin-top: 20px;
+}
+
+.result-section {
+    text-align: center;
+}
+
+.result-effect {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Celebration animation */
+@keyframes celebration {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200px); }
+}
+
+.celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://usagif.com/wp-content/uploads/gif/confetti-40.gif') no-repeat center center;
+    background-size: cover;
+    
+}
+
